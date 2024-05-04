@@ -1,0 +1,100 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1, h3{
+    color: #B92B27;
+}
+
+#login {
+    background-color: white;
+}
+
+#signup {
+    background-color: #B92B27;
+    color: white;
+}
+
+.upvote {
+    background-color: green;
+    color: aliceblue;
+}
+
+/* descendant selector */
+.post a {
+    color: purple;
+    background-color: rgb(255, 255, 0);
+    text-decoration: none;
+}
+
+#last {
+    text-transform: uppercase;
+}
+
+/* adjacent sibling combinator {element immedietly after one element!}*/ 
+p + h3 {
+     text-decoration: underline; 
+}
+
+.upvote + button{
+    background-color: lightblue;
+    color: darkblue;
+}
+
+/* child combinator selector! {It'll Select only direct descendent}*/
+div > input[type="password"]{
+    color: rgb(199, 73, 73);
+    }
+div > input[type="text"]{
+    color: green;
+}
+div > input[type]{
+    background-color: ghostwhite;
+}
+/* attribute selector */
+/* input [type="text"] {
+    background-color: white;
+} ?*/
+
+input[type="radio"]:checked + label{
+    color: #B92B27;
+}
+
+div:nth-of-type(2n){
+    background-color: blanchedalmond;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+button:active{
+    background-color: hotpink;
+    color: black;
+}
+h3:hover {
+    text-decoration: none;
+}
+
+#login:hover, #signup:hover{
+    background-color: black;
+    color: white;
+}
+
+#login:active, #signup:active{
+    background-color: hotpink;
+    color: black;
+}
+
+/* psuedo classes:- hover, checked, active, nth-of-type() */
+
+/* --> psuedo elements:- {first-line, first-letter, selecton}*/
+h1::first-letter{
+    color: green;
+}
+
+/* due to specificity the color of login and signup button is unable to change(read more about specificity and cascading at mdn!) */
+/* Order in terms of specificity is:- inline style > id > class > element */
+/* more selectors > less selectors */
+/* if specificity is same than check cascading! */
